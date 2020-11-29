@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>我的博客</title>
+</head>
+<body>
+<h2>欢迎来到我的博客网站</h2>
+<h2>{{ master }}</h2>
+<h3>{{ list.0 }}</h3>
+<h3>{{ list.1 }}</h3>
+<h4>{{ dict.k }}</h4>
+<h4>{{ dict.v }}</h4>
+循环集合list：
+{% for item in list %}
+    {{ item }}
+{% endfor %}
+</body>
+</html>

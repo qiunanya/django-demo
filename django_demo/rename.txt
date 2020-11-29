@@ -1,0 +1,4 @@
+创建Django项目配置三部曲：
+1、创建django项目
+2、在settings 中配置静态文件和目录，静态文件和模板必须同级目录，否则无法找到
+3、在settings 中的MIDDLEWARE对象里注释防御攻击安全标识csrf, 否则请求报错Forbidden

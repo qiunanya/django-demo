@@ -1,0 +1,15 @@
+#user_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #03506f;
+    padding: 25px 15px;
+    border-radius: 6px;
+}
+.first_input{
+    background-color: #ffffff;
+}
+input{
+    margin-bottom: 14px;
+ }
