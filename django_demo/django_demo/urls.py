@@ -67,5 +67,6 @@ urlpatterns = [
     path('welcome/', welcome),
     path('login/', login),
     path('index/', index),
-    path('class/', class_actioin.classes)
+    path('class/', class_actioin.classes),
+    path('add_class/', class_actioin.add_class)
 ]
