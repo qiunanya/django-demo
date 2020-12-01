@@ -1,24 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>班级列表</title>
+    <meta charset="UTF-8">
+    <title>班级列表</title>
+    <style type="text/css">
+        .table_class{
+            color: azure;
+            background: #16697a;
+            border-color: aliceblue;
+            border-radius: 8px;
+        }
+        .table_class > tbody > tr:nth-child(odd) > td{
+            {#background-color: #9ad3bc;#}
+            padding: 10px;
+        }
+        .table_class > tbody > tr:nth-child(even) > td{
+            padding: 10px;
+        }
+        .table_class > tbody > tr > td:last-child{
+            background-color: #ffa62b;
+        }
+        .table_class > tbody > tr > td:last-child > a{
+            text-decoration: none;
+        }
+        .table_class > tbody > tr > td:last-child > a:first-child{
+            color: white;
+            padding-right: 10px;
+        }
+        .table_class > tbody > tr > td:last-child > a:last-child{
+            color: red;
+            padding-left: 10px;
+        }
+    </style>
 </head>
-<body>
-<h1>班级列表</h1>
-<h2><a href="/add_class/">新增班级</a></h2>
-<table border="1" width="260">
+<body >
+<h1 style="color: #03506f;"> python 班级列表</h1>
+<h2 ><a href="/add_class/" style="color: #5aa469;text-decoration: none;">新增班级</a></h2>
+<table class="table_class" border="1" width="600" style="text-align: center">
     <thead>
         <tr>
             <th>ID</th>
             <th>班级名称</th>
+            <th>操作</th>
         </tr>
     </thead>
-    <tbody style="text-align: center">
+    <tbody >
         {% for item in class_list %}
             <tr>
                <td>{{ item.id }}</td>
                <td>{{ item.title }}</td>
+               <td><a href="/edit_class/?nid={{ item.id }}">编辑</a>|<a href="/del_class/?nid={{ item.id }}">删除</a></td>
             </tr>
         {% endfor %}
     </tbody>
